@@ -1,5 +1,6 @@
 package baseball.answer;
 
+import baseball.ball.BallCheckResult;
 import baseball.ball.Balls;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class Answer {
         answerBalls = new Balls(numberList);
     }
 
-    public String checkAnswer(Balls balls) {
+    public BallCheckResult checkAnswer(Balls balls) {
         return answerBalls.checkResult(balls);
     }
 }

@@ -1,5 +1,7 @@
 package baseball.ball;
 
+import baseball.config.BaseballConfig;
+
 public class BallCheckResult {
     private int strike = 0;
     private int ball = 0;
@@ -33,5 +35,9 @@ public class BallCheckResult {
         }
 
         return result.toString().trim();
+    }
+
+    public boolean isFinish() {
+        return strike == BaseballConfig.NUMBER_COUNT;
     }
 }

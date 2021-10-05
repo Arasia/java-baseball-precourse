@@ -32,7 +32,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(4, 5, 6));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("낫싱");
     }
 
@@ -41,7 +41,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(3, 4, 5));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("1볼");
     }
 
@@ -50,7 +50,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(2, 3, 4));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("2볼");
     }
 
@@ -59,7 +59,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(2, 3, 1));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("3볼");
     }
 
@@ -68,7 +68,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(1, 4, 5));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("1스트라이크");
     }
 
@@ -77,7 +77,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(1, 3, 4));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("1스트라이크 1볼");
     }
 
@@ -86,7 +86,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(1, 3, 2));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("1스트라이크 2볼");
     }
 
@@ -95,7 +95,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(1, 2, 4));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("2스트라이크");
     }
 
@@ -104,7 +104,7 @@ class BallsTest {
         Balls answer = new Balls(Arrays.asList(1, 2, 3));
         Balls input = new Balls(Arrays.asList(1, 2, 3));
 
-        assertThat(answer.checkResult(input))
+        assertThat(answer.checkResult(input).getResultString())
                 .isEqualTo("3스트라이크");
     }
 }

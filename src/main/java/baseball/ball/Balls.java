@@ -36,14 +36,14 @@ public class Balls {
         }
     }
 
-    public String checkResult(Balls balls) {
+    public BallCheckResult checkResult(Balls balls) {
         BallCheckResult ballCheckResult = new BallCheckResult();
 
         for (Map.Entry<Integer, Ball> entry : balls.ballHashMap.entrySet()) {
             ballCheckResult.addResult(checker(entry.getValue()));
         }
 
-        return ballCheckResult.getResultString();
+        return ballCheckResult;
     }
 
     public BallResult checker(Ball ball) {

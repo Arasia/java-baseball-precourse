@@ -31,7 +31,7 @@ class AnswerTest {
     void checkAnswerTest_Nothing() {
         Balls input = new Balls(Arrays.asList(2, 4, 6));
 
-        assertThat(answer.checkAnswer(input))
+        assertThat(answer.checkAnswer(input).getResultString())
                 .isEqualTo("낫싱");
     }
 
@@ -39,7 +39,7 @@ class AnswerTest {
     void checkAnswerTest_Ball3() {
         Balls input = new Balls(Arrays.asList(3, 5, 1));
 
-        assertThat(answer.checkAnswer(input))
+        assertThat(answer.checkAnswer(input).getResultString())
                 .isEqualTo("3볼");
     }
 
@@ -47,7 +47,7 @@ class AnswerTest {
     void checkAnswerTest_Strike3() {
         Balls input = new Balls(Arrays.asList(1, 3, 5));
 
-        assertThat(answer.checkAnswer(input))
+        assertThat(answer.checkAnswer(input).getResultString())
                 .isEqualTo("3스트라이크");
     }
 }
